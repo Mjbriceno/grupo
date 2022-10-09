@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,500;1,700&display=swap');
+@import url('fontawesome-free-6.2.0-web/css/all.min.css');
 :root{
     --color1: #252940;
     --color2: #1B52BF;
@@ -10,15 +11,22 @@
     --color-gris-claro: #CCCCCC;
     --color-gris-oscuro: #333333;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{ /* Así se crea una regla de estilo para el objeto body */
     background-color: var(--color-gris-claro); /* Color de fondo */
-    color: var(--color-gris-oscuro); /* Color de texto */
-    font-family: 'Pacifico', cursive;
-    font-size: 18px;
+    color: var(--color-negro); /* Color de texto */
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
 }
 img{
     display: block;
+}
+p{
+    margin-top: 0;
+
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,23 +34,62 @@ h1, h2, h3, h4, h5, h6 {
 }
 h1{
     font-size: 48px; /* Tamaño de la letra en pixeles */
-    font-weight: 900; /* Estilo o grosor de la letra */
+    font-weight: 700; /* Estilo o grosor de la letra */
 }
 h2{
-    font-weight: 200; 
+    font-weight: 700; 
     font-size: 40px;
-    text-transform:capitalize; /* Mostrar los textos en minúscula */
+    text-transform:initial; /* Mostrar los textos en minúscula */
     letter-spacing: -2px;
+    margin-bottom: 12px;
+
 }
 h3{
-    font-size: 18px;
+    font-size: 24px;
     text-transform:uppercase; /* Mostrar los textos en mayúcula */
     font-weight: 700;
+    margin-top: 15px;
+    margin-bottom: 8;
+}
+h1 a{
+    color: var(--color-gris-oscuro);
+
+}
+h1 a:hover{
+    color: var(--color-gris-oscuro);
+    text-decoration: none;
 }
 
+#main-banner{
+    background-image: url("../images/baner.jpg");
+    background-position:center ;
+    background-size: 100%;
+    text-align: center;
+    color: var(--color-gris-oscuro);
+    font-weight:700;
+    
+}
+
+
+
+#top-nav{
+    background-color: var(--color-gris-oscuro);
+}
 #main-header{
     background-color:var(--color2);
     color: var(--color-blanco);
+    position:sticky ;
+    top: 0;
+}
+
+#main-header-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+#main-header p{
+    margin-bottom: 0;
+
 }
 
 #brecha{ /* Así se aplica formato a un objeto por su id */
@@ -55,8 +102,36 @@ h3{
     color: var(--color-gris-oscuro)
 }
 
+#banerbrecha{
+    background-image: url("../images/banerbrecha1.jpg");
+    background-position:center ;
+    background-size: cover;
+    text-align: left;
+    color: var(--color-negro);
+    background-attachment: fixed ;
+}
+
+
+
 #problemas{
     background-color: var(--color5);
+}
+
+#iconos{
+    background-color: var(--color3);
+    text-align: center;
+}
+#iconos i{
+    font-size: 2em;
+    color: var(--color-blanco);
+}
+a{
+    color:var(--color3);
+    text-decoration: none;
+}
+a:hover{
+    color:var(--color-gris-oscuro);
+    text-decoration: underline;
 }
 
 #estrategias{
@@ -93,8 +168,59 @@ padding-right: 15px;
     padding-right:15px;
     flex-basis: 0;
     flex-grow: 1;
+    box-sizing: border-box; /*para que el pading no afecte el ancho*/
         }
 .img-fluid{
     max-width: 100%;
     height: auto;
-            }    
+            }
+.centrar-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.col-50{
+    flex-basis: 50%;
+    max-width: 50%;
+}
+.mega-texto{
+    font-size: 48px;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-weight: 700px;
+    line-height: 0.8 em
+}
+.menu{
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li a{
+    display: block;
+}
+.menu-top li a{
+    padding: 5px 8px;
+    color: var(--color-gris-claro);
+    font-size: 0.9em;
+}
+.menu-top li a:hover{
+    color:var(--color-blanco);
+    text-decoration: none; 
+    background-color: rgba(0,0,0.8);
+
+}
+.menu-main li a{
+    padding: 30px 12px;
+color: var(--color-negro);
+text-transform: uppercase;
+font-weight: 700;
+font-size: 0.8em;
+}
+
+.menu-main li a:hover{
+    color: var(--color-blanco);
+    text-decoration: none;
+
+}
