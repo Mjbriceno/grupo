@@ -19,10 +19,14 @@ body{ /* Así se crea una regla de estilo para el objeto body */
     background-color: var(--color-gris-claro); /* Color de fondo */
     color: var(--color-negro); /* Color de texto */
     font-family: 'Cormorant Garamond', serif;
+    
     font-size: 24px;
 }
 img{
     display: block;
+}
+figure{
+    margin: 0;
 }
 p{
     margin-top: 0;
@@ -99,7 +103,8 @@ h1 a:hover{
 
 #igualdad{
     background-color:var(--color4);
-    color: var(--color-gris-oscuro)
+    color: var(--color-negro);
+    font-style: oblique;
 }
 
 #banerbrecha{
@@ -184,11 +189,13 @@ padding-right: 15px;
     max-width: 50%;
 }
 .mega-texto{
-    font-size: 48px;
+    font-size: 60px;
+    font-style:oblique;
     text-transform: uppercase;
     letter-spacing: -2px;
     font-weight: 700px;
-    line-height: 0.8 em
+    line-height: 0.8 em;
+    color: var(--color-blanco);
 }
 .menu{
     list-style: none;
@@ -223,4 +230,41 @@ font-size: 0.8em;
     color: var(--color-blanco);
     text-decoration: none;
 
+}
+#lista-integrantes{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+#lista-integrantes li{
+    flex-basis: 33.33%;
+    background-color: #F25922;
+    max-width: 33.33%;
+    text-align: center;
+    padding: 15px;
+    box-sizing:border-box;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.botonera{
+    display: flex;
+}
+.circulo{
+    border:solid 2px var(--color-gris-oscuro);
+    width: 20px;
+    height :20px;
+    margin-right: 5px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+#boton-oscuro{
+    background-color: var(--color-gris-claro);
+
+}
+
+#caja-posicion {
+    font-size: 20px;
+    padding: 0 10px;
 }
