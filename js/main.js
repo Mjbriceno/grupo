@@ -1,11 +1,11 @@
 var muestraFoto = document.getElementById("visor");
 
 document.getElementById("boton-miriam").addEventListener("click",function(){
-    muestraFoto.src ="../images/Miriam.jpg";
+    muestraFoto.src ="images/Miriam.jpg";
 });
 
 document.getElementById("boton-martin").addEventListener("click",function(){
-    muestraFoto.src ="../images/Martin.jpeg";
+    muestraFoto.src ="images/Martin.jpeg";
 });
 
 
