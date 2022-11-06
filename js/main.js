@@ -137,7 +137,7 @@ let iIntegra = document.getElementById("menu-item-integra");
 let mContent = document.getElementById("main-content");
 
 iSteam.addEventListener("click", function(){
-    fetch('../paginas/steam.html')
+    fetch('paginas/steam.html')
     .then(Response => Response.text())
     .then(data => {
         mContent.innerHTML = data;
@@ -145,7 +145,7 @@ iSteam.addEventListener("click", function(){
 })
 
 iIntegra.addEventListener("click", function(){
-    fetch('../paginas/integrantes.html')
+    fetch('paginas/integrantes.html')
     .then(Response => Response.text())
     .then(data => {
         mContent.innerHTML = data;
