@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('fontawesome-free-6.2.0-web/css/all.min.css');
+
 :root{
     --color1: #252940;
     --color2: #1B52BF;
@@ -160,6 +161,12 @@ a:hover{
 #autores{
     background-color: var(--color2);
 }
+
+#videos{
+    background-color:var(--color-negro);
+    color: var(--color-blanco);
+}
+
 
 #main-footer{
     background-color: var(--color-negro);
@@ -323,7 +330,49 @@ font-size: 0.8em;
     padding: 0 10px;
 }
 .video{
-aspect-ratio: 16 /9;    
+aspect-ratio: 16 / 9;    
 width: 100%;
 height: auto;
+}
+
+.mapa{
+    aspect-ratio: 4 / 3;    
+    width: 100%;
+    height: auto;
+    }
+
+/* FORMULARIO ***********/
+
+.form-control{
+     width: 100%;   
+     padding: 10px;
+     font: inherit;
+     box-sizing: border-box;
+     border-radius: 0px;
+     border: none;
+     border-bottom: solid 1px var(--color-gris-claro);
+     outline: none;
+
+    }
+.form-control:focus{
+border-bottom-color:var(--color4)
+}
+
+.form-group{
+padding: 5px;
+
+    }
+.form-button{
+     padding: 10px 15px;
+     font: inherit;
+     border: none;
+     background-color: var(--color2);
+     color: var(--color-blanco);
+     transition: all .5s ease-in-out;
+    }
+
+.form-button:hover{
+    background-color: var(--color4);
+    color: var(--color2);
+    cursor: pointer;
 }

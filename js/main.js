@@ -1,12 +1,14 @@
 var muestraFoto = document.getElementById("visor");
 
 document.getElementById("boton-miriam").addEventListener("click",function(){
-    muestraFoto.src ="/images/miriam.jpg";
+    muestraFoto.src ="../images/Miriam.jpg";
 });
 
 document.getElementById("boton-martin").addEventListener("click",function(){
-    muestraFoto.src ="/images/martin.jpeg";
+    muestraFoto.src ="../images/Martin.jpeg";
 });
+
+
 
 /************ */
 let bOscuro = document.getElementById("boton-oscuro");
@@ -59,7 +61,6 @@ botonFrase4.addEventListener("click", function() {
 
 })
 
-
 // generacion de numetos aleatorios o al azar */ 
 //console.log(Math.floor(Math.random()*3));
 //let aleatorio = Math.floor(Math.random()*3);
@@ -84,11 +85,11 @@ nombrePersonaje.innerHTML = personajes[aleatorio];
 //GALERIA con botones sesion8
 
 let paisajes = [];
-paisajes [0] = "images/mujerdoctor.jpg";
-paisajes [1] = "images/mujeringeniera.jpg";
-paisajes [2] = "images/mujermaestra.jpg"; //Ruta Relativa "images/desierto.jpg"
-paisajes [3] = "images/mujerquimica.jpg";
-paisajes [4] = "images/mujertec.jpg";
+paisajes [0] = "../images/mujerdoctor.jpg";
+paisajes [1] = "../images/mujeringeniera.jpg";
+paisajes [2] = "../images/mujermaestra.jpg"; //Ruta Relativa "images/desierto.jpg"
+paisajes [3] = "../images/mujerquimica.jpg";
+paisajes [4] = "../images/mujertec.jpg";
 
 let muestra = document.getElementById("muestra");
 let bAvanzar = document.getElementById("boton-avanzar");
@@ -136,7 +137,7 @@ let iIntegra = document.getElementById("menu-item-integra");
 let mContent = document.getElementById("main-content");
 
 iSteam.addEventListener("click", function(){
-    fetch('steam.html')
+    fetch('../paginas/steam.html')
     .then(Response => Response.text())
     .then(data => {
         mContent.innerHTML = data;
@@ -144,7 +145,7 @@ iSteam.addEventListener("click", function(){
 })
 
 iIntegra.addEventListener("click", function(){
-    fetch('integrantes.html')
+    fetch('../paginas/integrantes.html')
     .then(Response => Response.text())
     .then(data => {
         mContent.innerHTML = data;
