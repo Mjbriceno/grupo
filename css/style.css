@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titan+One&display=swap');
 @import url('fontawesome-free-6.2.0-web/css/all.min.css');
 :root{
     --color1: #252940;
@@ -18,10 +19,11 @@ html{
 body{ /* Así se crea una regla de estilo para el objeto body */
     background-color: var(--color-gris-claro); /* Color de fondo */
     color: var(--color-negro); /* Color de texto */
-    font-family: 'Cormorant Garamond', serif;
-    
+    /*font-family: 'Cormorant Garamond', serif;*/
+    /*font-family: 'Titan One', cursive;*/
     font-size: 24px;
 }
+
 img{
     display: block;
 }
@@ -65,6 +67,7 @@ h1 a:hover{
 }
 
 #main-banner{
+    
     background-image: url("../images/baner.jpg");
     background-position:center ;
     background-size: 100%;
@@ -73,8 +76,6 @@ h1 a:hover{
     font-weight:700;
     
 }
-
-
 
 #top-nav{
     background-color: var(--color-gris-oscuro);
@@ -101,14 +102,15 @@ h1 a:hover{
     color: var(--color-blanco);
 }
 
-#igualdad{
+#igualdad,
+#igualdad1{
     background-color:var(--color4);
     color: var(--color-negro);
     font-style: oblique;
 }
 
 #banerbrecha{
-    background-image: url("../images/banerbrecha1.jpg");
+    background-image: url("../images/brecha1.jpg");
     background-position:center ;
     background-size: cover;
     text-align: left;
@@ -116,9 +118,18 @@ h1 a:hover{
     background-attachment: fixed ;
 }
 
+#banernoticia{
+    background-image: url("../images/banernoticia.jpg");
+    background-position:center ;
+    background-size: cover;
+    text-align: left;
+    color: var(--color-negro);
+    background-attachment: fixed ;
+}
 
-
-#problemas{
+#problemas,
+#steam
+{
     background-color: var(--color5);
 }
 
@@ -139,9 +150,15 @@ a:hover{
     text-decoration: underline;
 }
 
-#estrategias{
+#estrategias,
+#noticia
+{
     background-color: var(--color4);
     color: var(--color-negro);
+}
+
+#autores{
+    background-color: var(--color2);
 }
 
 #main-footer{
@@ -188,15 +205,45 @@ padding-right: 15px;
     flex-basis: 50%;
     max-width: 50%;
 }
+.mega-baner{
+        font-family: 'Titan One', cursive;
+        font-size: 50px;
+        font-style:oblique;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700px;
+        line-height: 0.8 em;
+        color: var(--color-blanco);
+    }
 .mega-texto{
+font-family: 'Titan One', cursive;
+    font-size: 50px;
+    font-style:oblique;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700px;
+    line-height: 0.8 em;
+    color: var(--color2);
+}
+.mega-noticia{
+    font-family: 'Titan One', cursive;
+        font-size: 50px;
+        font-style:oblique;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 700px;
+        line-height: 0.8 em;
+        color: var(--color-negro);
+    }
+.mega-personaje{
     font-size: 60px;
     font-style:oblique;
     text-transform: uppercase;
     letter-spacing: -2px;
     font-weight: 700px;
     line-height: 0.8 em;
-    color: var(--color-blanco);
-}
+    color: var(--color2);
+ }
 .menu{
     list-style: none;
     display: flex;
@@ -231,13 +278,20 @@ font-size: 0.8em;
     text-decoration: none;
 
 }
-#lista-integrantes{
+#lista-integrantes,
+#lista-autores
+{
     list-style: none;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
 }
-#lista-integrantes li{
+#lista-integrantes li,
+#lista-autores li
+{
     flex-basis: 33.33%;
     background-color: #F25922;
     max-width: 33.33%;
@@ -267,4 +321,9 @@ font-size: 0.8em;
 #caja-posicion {
     font-size: 20px;
     padding: 0 10px;
+}
+.video{
+aspect-ratio: 16 /9;    
+width: 100%;
+height: auto;
 }

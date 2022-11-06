@@ -1,9 +1,11 @@
+var muestraFoto = document.getElementById("visor");
+
 document.getElementById("boton-miriam").addEventListener("click",function(){
-    document.getElementById("visor").src ="images/miriam.jpg";
+    muestraFoto.src ="/images/miriam.jpg";
 });
 
 document.getElementById("boton-martin").addEventListener("click",function(){
-    document.getElementById("visor").src ="images/martin.jpeg";
+    muestraFoto.src ="/images/martin.jpeg";
 });
 
 /************ */
@@ -127,3 +129,24 @@ bAvanzar.addEventListener("click", function(){
         muestra.src = paisajes[posicion]; // linea 105 de html
         }
         //setInterval(avanzar, 1000); 
+
+//API FETCH para cargar paginas
+let iSteam = document.getElementById("menu-item-steam");
+let iIntegra = document.getElementById("menu-item-integra");
+let mContent = document.getElementById("main-content");
+
+iSteam.addEventListener("click", function(){
+    fetch('steam.html')
+    .then(Response => Response.text())
+    .then(data => {
+        mContent.innerHTML = data;
+    });
+})
+
+iIntegra.addEventListener("click", function(){
+    fetch('integrantes.html')
+    .then(Response => Response.text())
+    .then(data => {
+        mContent.innerHTML = data;
+    });
+})
